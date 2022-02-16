@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
     textTheme:GoogleFonts.varelaRoundTextTheme(),
       ),
-      home: NavigationContainer(),
+      home: const NavigationContainer(),
     );
   }
 }

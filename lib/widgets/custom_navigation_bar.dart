@@ -13,7 +13,7 @@ final Function  onIconTap;
     fontWeight: FontWeight.w600);
     return  BottomAppBar(
       color: selectedPageIndex ==0 ? Colors.black:Colors.white,
-      child: Container(
+      child: SizedBox(
         height: barHeight,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -60,7 +60,7 @@ final Function  onIconTap;
         height: height -15,
         width: 48,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors:[ Colors.blueAccent, Colors.redAccent]),
+          gradient: const LinearGradient(colors:[ Colors.blueAccent, Colors.redAccent]),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Center(

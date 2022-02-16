@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tiktok_tut/models/video.dart';
@@ -20,7 +18,7 @@ class _HomeSlideBarState extends State<HomeSlideBar>
   @override
   void initState() {
     _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 5));
+        AnimationController(vsync: this, duration: const Duration(seconds: 5));
     _animationController.repeat();
     super.initState();
   }
@@ -52,7 +50,7 @@ class _HomeSlideBarState extends State<HomeSlideBar>
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 50,
                     height: 50,
                     child: SvgPicture.asset("assets/disc.svg"),
@@ -84,7 +82,7 @@ class _HomeSlideBarState extends State<HomeSlideBar>
           width: 20,
           color: Colors.white,
         ),
-        SizedBox(
+        const SizedBox(
           height: 3,
         ),
         Text(
@@ -115,7 +113,7 @@ class _HomeSlideBarState extends State<HomeSlideBar>
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.red, borderRadius: BorderRadius.circular(25)),
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: Colors.white,
                 size: 20,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_tut/_mock_data/mock.dart';
 import 'package:tiktok_tut/widgets/home_slide_bar.dart';
@@ -69,6 +68,7 @@ class _HomePageState extends State<HomePage> {
       body: PageView.builder(
           onPageChanged: (int page) => {
             _snapPageIndex = page,
+            // ignore: avoid_print
             print("page changed to $page")},
           scrollDirection: Axis.vertical,
           itemCount: videos.length,
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Expanded(
                     flex: 3,
-                    child: Container(
+                    child: SizedBox(
                       child: VideoDetails(
                         video: videos[index],
                       ),
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       height: MediaQuery.of(context).size.height / 1.75,
                       child: HomeSlideBar(
                         video: videos[index],
