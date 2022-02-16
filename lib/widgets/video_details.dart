@@ -21,7 +21,7 @@ class VideoDetails extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyText1!.copyWith(
                 color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           ExpandableText(
@@ -45,9 +45,10 @@ class VideoDetails extends StatelessWidget {
                 color: Colors.white,
                 size: 12,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
+              // ignore: sized_box_for_whitespace
               Container(
                 height: 20,
                 width: 50,
